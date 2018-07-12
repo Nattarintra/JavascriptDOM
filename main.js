@@ -1,16 +1,13 @@
-var titles = document.getElementsByClassName('title');
+const wmf = document.querySelector('#book-list li:nth-child(2) .name');
+//console.log(wmf);
 
-    // console.log(Array.isArray(titles)); // chk if is arrey or not. if is false then is not an array.
-    // console.log(Array.isArray(Array.from(titles))); // we convert from HTML collections to an Array. 
+var books = document.querySelector('#book-list li .name');
+//console.log(books);
+
+books = document.querySelectorAll('#book-list li .name');
+console.log(books);
+
+Array.from(books).forEach(function(book){
+    console.log(book);
     
-    
-    //titles.forEach(function(item){ // main.js:8 Uncaught TypeError: titles.forEach is not a function 
-
-Array.from(titles).forEach(function(item){ // convert from HTML collections to an Array.
-     console.log(item);
-
-
- });
-
-
-
+})
