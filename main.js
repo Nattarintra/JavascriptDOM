@@ -1,10 +1,11 @@
-var books = document.querySelectorAll('#book-list li .name');
+const banner = document.querySelector('#page-banner');
 
-Array.from(books).forEach(function(book){
-//book.textContent = 'Nattarintra'; // change from original to Nattarintra
-book.textContent += ' Thutsanti'; // Apend text 
-});
+console.log('#page-banner node type is:', banner.nodeType); // #page-banner node type is: 1
+console.log('#page-banner node name is:', banner.nodeName); // #page-banner node name is: DIV
+console.log('#page-banner has child nodes:', banner.hasChildNodes()); // #page-banner has child nodes: true
 
-const bookList = document.querySelector('#book-list');
-//bookList.innerHTML = '<h2>Nattarintra books </h2>'; // This is gonna replace from the original HTML elements
-bookList.innerHTML += '<p> I have no books list yet</p>'; // Apend text inner html.
+const clonedBanner = banner.cloneNode(true); // if is true will clone a hole div + child from #page-banner
+//const clonedBanner = banner.cloneNode(false); // if is true will clone only <div id="page-banner"></div> without child
+console.log(clonedBanner);
+
+
