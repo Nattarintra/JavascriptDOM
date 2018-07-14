@@ -1,13 +1,10 @@
-const wmf = document.querySelector('#book-list li:nth-child(2) .name');
-//console.log(wmf);
-
-var books = document.querySelector('#book-list li .name');
-//console.log(books);
-
-books = document.querySelectorAll('#book-list li .name');
-console.log(books);
+var books = document.querySelectorAll('#book-list li .name');
 
 Array.from(books).forEach(function(book){
-    console.log(book);
-    
-})
+//book.textContent = 'Nattarintra'; // change from original to Nattarintra
+book.textContent += ' Thutsanti'; // Apend text 
+});
+
+const bookList = document.querySelector('#book-list');
+//bookList.innerHTML = '<h2>Nattarintra books </h2>'; // This is gonna replace from the original HTML elements
+bookList.innerHTML += '<p> I have no books list yet</p>'; // Apend text inner html.
