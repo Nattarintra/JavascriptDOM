@@ -1,11 +1,17 @@
-const banner = document.querySelector('#page-banner');
-
-console.log('#page-banner node type is:', banner.nodeType); // #page-banner node type is: 1
-console.log('#page-banner node name is:', banner.nodeName); // #page-banner node name is: DIV
-console.log('#page-banner has child nodes:', banner.hasChildNodes()); // #page-banner has child nodes: true
-
-const clonedBanner = banner.cloneNode(true); // if is true will clone a hole div + child from #page-banner
-//const clonedBanner = banner.cloneNode(false); // if is true will clone only <div id="page-banner"></div> without child
-console.log(clonedBanner);
+const bookList = document.querySelector('#book-list');
+// Parent to Children and Children to Parent
+console.log('the parent node is:', bookList.parentNode); // #wrapper is parent node
+console.log('the parent element is:', bookList.parentElement.parentElement); // body is parent element
+console.log(bookList.childNodes);
+console.log(bookList.children);
 
 
+// Next siblings to sibling
+console.log('book-list next sibling is:', bookList.nextSibling);
+console.log('book-list next element sibling is:', bookList.nextElementSibling);
+
+//  Previous
+console.log('book-list previous sibling is:', bookList.previousSibling);
+console.log('book-list previous element sibling is:', bookList.previousElementSibling);
+
+bookList.previousElementSibling.querySelector('p').innerHTML += '<br> This is apend paragh innerhtml. this go to previousElementSibling and go into p tag element. <br> And apend content.'
