@@ -10,7 +10,7 @@ console.log(bookList.children);
 console.log('book-list next sibling is:', bookList.nextSibling);
 console.log('book-list next element sibling is:', bookList.nextElementSibling);
 
-//  Previous
+//  Previous siblings to sibling
 console.log('book-list previous sibling is:', bookList.previousSibling);
 console.log('book-list previous element sibling is:', bookList.previousElementSibling);
 
